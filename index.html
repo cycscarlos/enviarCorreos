@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Envio de Formulario | Programación DAM</title>
+  </head>
+  <body>
+    <section id="registro" >
+      <div class="container">
+        <article class="hero-image-registro">
+          <aside
+            class="hero-image-registro-opacity"
+            style="--hero-opacity-color: var(--black-color-opacity)"
+          >
+            <div class="hero-image-registro-content">
+              <div class="section-title">
+                <h2>Registro</h2>
+              </div>
+
+              <form
+                target="_blank"
+                action="https://formsubmit.co/ccolmenaresa@gmail.com"
+                method="POST"
+                class="registro-form box-shadow-form"
+              >
+                <!-- inputs requeridos por la API formSubmit -->
+
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="¡Confirmación de Registro!"
+                />
+
+                <input
+                  type="hidden"
+                  name="_autoresponse"
+                  value="¡Hola! Gracias por Confirmar; Nos vemos en la boda!"
+                />
+
+                <input type="hidden" name="_captcha" value="false" />
+
+                <input type="hidden" name="_template" value="table" />
+
+                <!-- inputs del Formulario -->
+
+                <!-- Solo acepta letras (cualquier case) y espacios en blancos -->
+                <div class="inputBox">
+                  <input
+                    type="text"
+                    name="name"
+                    title="Solo acepta letras y espacios en blanco"
+                    pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+                    required
+                    class="box-shadow-inputs"
+                  />
+                  <span>Nombre y Apellido</span>
+                </div>
+
+                <!-- Solo acepta números y hasta un máximo de 8 carácteres -->
+                <div class="inputBox">
+                  <input
+                    type="text"
+                    name="cedula"
+                    title="Solo acepta números y hasta un máximo de 8 carácteres"
+                    pattern="^[0123456789]{1,8}"
+                    required
+                    class="box-shadow-inputs"
+                  />
+                  <span>Cédula de Identidad</span>
+                </div>
+
+                <!-- Solo acepta números y hasta un máximo de 11 carácteres -->
+                <div class="inputBox">
+                  <input
+                    type="text"
+                    name="telefono"
+                    title="Solo acepta números y hasta un máximo de 11 carácteres"
+                    pattern="^[0123456789]{1,11}"
+                    required
+                    class="box-shadow-inputs"
+                  />
+                  <span>Número de Teléfono</span>
+                </div>
+
+                <!-- Solo acepta formato de Email, con el signo de arroba (@) incluido -->
+                <div class="inputBox">
+                  <input
+                    type="email"
+                    name="email"
+                    title="Email incorrecto"
+                    pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+                    required
+                    class="input box-shadow-inputs"
+                  />
+                  <!-- pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" -->
+                  <span>Correo Electrónico</span>
+                </div>
+
+                <label class="box-shadow-inputs" for="boutique"
+                  >Elige la tienda de regalos:</label
+                >
+                <div class="custom-select">
+                  <select
+                    name="regalos"
+                    id="boutique"
+                    class="box-shadow-inputs"
+                  >
+                    <option value="Nidito de Amor">Nidito de Amor</option>
+                    <option value="Casa Boda Feliz">Casa Boda Feliz</option>
+                    <option value="Union de Ensueño">Unión de Ensueño</option>
+                    <option value="La Boutique">La Boutique</option>
+                    <option value="Love & Love">Love & Love</option>
+                    <option value="House of My Dreams">
+                      House of My Dreams
+                    </option>
+                  </select>
+                </div>
+
+                <input
+                  class="registro-btn box-shadow-white"
+                  type="submit"
+                  value="CONFIRMAR"
+                />
+              </form>
+
+              <footer class="footer">
+                <div class="container">
+                  <small
+                    >Copyright &copy;
+                    <a
+                      href="https://carlos-colmenares-a.netlify.app"
+                      target="_blank"
+                      rel="noopener"
+                      ><small> Carlos Colmenares A.</small></a
+                    ></small
+                  >
+                  | <small>Todos los derechos reservados</small>
+                </div>
+              </footer>
+
+              <div id="gracias" class="modal">
+                <div class="modal-content">
+                  <article class="contact-form-response">
+                    <h3>
+                      ¡Muchas Gracias!
+                      <br />
+                      Por confirmar
+                    </h3>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M12,18c4,0,5-4,5-4H7C7,14,8,18,12,18z" />
+                      <path
+                        d="M12,2C6.486,2,2,6.486,2,12c0,5.514,4.486,10,10,10s10-4.486,10-10C22,6.486,17.514,2,12,2z M12,20c-4.411,0-8-3.589-8-8 s3.589-8,8-8s8,3.589,8,8S16.411,20,12,20z"
+                      />
+                      <path
+                        d="M13 12l2 .012C15.012 11.55 15.194 11 16 11s.988.55 1 1h2c0-1.206-.799-3-3-3S13 10.794 13 12zM8 11c.806 0 .988.55 1 1h2c0-1.206-.799-3-3-3s-3 1.794-3 3l2 .012C7.012 11.55 7.194 11 8 11z"
+                      />
+                    </svg>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </article>
+      </div>
+    </section>
+
+    <script src="./assets/js/emailForm.js"></script>
+  </body>
+</html>
