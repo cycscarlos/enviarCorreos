@@ -2,7 +2,7 @@
 ((d) => {
   const $form = d.querySelector(".registro-form");
   // $loader = d.querySelector(".registro-form-loader"),
-  const $response = d.querySelector(".registro-form-response");
+  const $response = d.querySelector(".contact-form-response");
 
   $form.addEventListener("submit", (e) => {
     e.preventDefault();

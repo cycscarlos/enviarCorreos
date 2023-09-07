@@ -312,7 +312,6 @@ option {
 } */
 
 /* Ventana Modal */
-
 .modal#gracias:target {
   opacity: 1;
   pointer-events: auto;
@@ -354,6 +353,7 @@ option {
   height: 4rem;
   fill: var(--first-color);
 }
+/* End ventana modal styles */
 
 /*  Footer */
 
